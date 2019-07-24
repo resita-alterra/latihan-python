@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title%}
+<title>Mentee</title>
+{% endblock %}
+
+{% block contact %} Contact Person : Email : academy@alphatech.id Mobile phone: 0877 9609 9530{% endblock %}
+
+{% block blog %}{% endblock %}
+
+{% block content%}
+<div class="container" style="margin-bottom: 30px; margin-top: 30px;">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center" style="display: block;margin-bottom: 30px;">
+            <h3>Our Mentee</h3>
+        </div>
+    </div>
+    {% for i in mentee %}
+    <div class="row" style="margin-top: 30px;">
+            <div class="col-4 d-flex justify-content-center" >
+                    <img src="{{ i.nama_file_image }}" style="width: 60%">
+            </div>
+            <!-- {% get_static_prefix %}static/images/{{ image.title }}.png -->
+            <div class="col-8">
+                <h4 style="font-weight: 600">{{ i.nama }}</h4>
+                <p>"{{i.quote}}"</p>
+            </div>    
+        </div>
+        {% endfor %}
+</div>
+{% endblock %}

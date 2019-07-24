@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title%}
+<title>Mentor</title>
+{% endblock %}
+
+{% block contact %} Contact Person : Email : academy@alphatech.id Mobile phone: 0877 9609 9530{% endblock %}
+
+{% block blog %}{% endblock %}
+
+{% block content%}
+<div class="container" style="margin-bottom: 30px; margin-top: 30px;">
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center" style="display: block;margin-bottom: 30px;">
+            <h3>Our Mentor</h3>
+        </div>
+    </div>
+    {% for i in mentor %}
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-4" >
+                <img src="{{i.nama_file_image}}" style="width: 250px;">
+        </div>
+        <div class="col-8">
+            <p style="color: grey; font-size: 25px; font-weight:700; margin: 0;">{{ i.nama }}</p>
+            <p style="font-weight: 700; margin: 0;">{{ i.exp }}</p>
+            <p style="margin: 0%;">"{{i.quote}}"</p>
+        </div>    
+    </div>
+    {% endfor %}
+        
+    
+        <!-- akhir dari yang mau diloop -->
+
+</div>
+{% endblock %}

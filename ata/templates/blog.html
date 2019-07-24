@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title%}
+<title>Blog</title>
+{% endblock %}
+
+{% block blog %}Blog{% endblock %}
+
+{% block content%}
+<div class="container">
+    {% for i in blog %}
+    <div class="row" style="margin: 50px;">
+        <div class="col-12">
+            <img src="{{ i.nama_file_image }}" style="width: 100%">
+        </div>
+        <div class="col-6 tanggal">
+            <p>{{i.tanggal_dipost}}</p>
+        </div>
+        <div class="col-6 komen" style="text-align: right;">
+            <p>{{ i.komen }} Comments</p>
+        </div>
+        <div class="col-12" style="display: block; align-content: center;">            
+            <h3>{{ i.title }}</h3>
+        </div>
+        <div class="col-12">
+            <div class = "post_body">
+                {{ i.isi|safe|truncatewords:"55"|linebreaks }}
+                <a href="{% url 'masukblog' i.id %}" style="color: blue">baca selengkapnya</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" >
+    {% block title%}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="container-fluid menu">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="judul">Alpha Tech Academy</div>
+                    <nav>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                            <li> <a href="{% url 'mentee' %}">Mentee</a></li>
+                            <li><a href="{% url 'mentor' %}">Mentor</a></li>
+                            <li><a href="{% url 'author' %}">Author</a></li>
+                        </ul>
+                    </nav>    
+                </div>
+            </div>            
+        </div>
+        <div class="container">
+            <div class="row isi-header">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <img src="{% static 'img/alpha-logo.png' %}">        
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <h1>Alpha Tech Academy {% block blog %}{% endblock %}</h1>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center">
+                    <h5 style="text-align: center;">
+                        Alpha Tech Academy is a tech talent incubator that gives everyone(even non IT background) a chance to be a professional Tech Talent within 3 months.{% block contact %}{% endblock %}
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content%}
+    {% endblock %}
+    <footer>
+        <div class="product">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h6 style="display: inline; font-size: 30px" class="align-self-center">Our Product:&nbsp&nbsp&nbsp</h6>
+                        <img src="{% static 'img/logo-grey-alphapay.png' %}" class="align-self-center">
+                        <img src="{% static 'img/logo-grey-sepulsa.png' %}">
+                        <img src="{% static 'img/logo-grey-alphabill.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <p style="text-align: center">Contact Person: Mobile Phone: 0877 9609 9530. Email: <span style="color: blue">academy@alphatech.id</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

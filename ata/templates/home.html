@@ -1,0 +1,100 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home </title>
+{% endblock %}
+
+{% block contact %} Contact Person : Email : academy@alphatech.id Mobile phone: 0877 9609 9530{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="benefit" style="margin-top: 50px;">
+        <!-- awesome,newjob,getpaid -->
+        <div class="row" style="margin: 10px;">
+            <div class="col-md-4">
+                <img src="{% static 'img/benefit.png' %}">
+            </div>
+            <div class="col-md-8">
+                <h5 style="font-weight: 700">Learn awesome tech</h5>
+                <p>You will learn about programming language, such as Python and Javascript, build back-end apps using Flask framework with microservice concept, build client-site apps using React, Library, etc.</p>
+            </div>
+        </div>
+
+        <div class="row" style="margin: 10px;">
+
+            <div class="col-md-4">
+                    <img src="{% static 'img/search-job.png' %}">
+            </div>
+            <div class="col-md-8">
+                    <h5 style="font-weight: 700">Land new job</h5>
+                    <p>If you can pass this awesome program, you will be part of our reliable tech team for especially Software Engineer position such as Quality Engineer, System Analyst, etc.</p>
+            </div>
+        </div>
+
+        <div class="row" style="margin: 10px;">
+            <div class="col-md-4">
+                    <img src="{% static 'img/get-paid.png' %}">
+            </div>
+            <div class="col-md-8">
+                    <h5 style="font-weight: 700">Get paid to learn</h5>
+                    <p>Join for free and earn some money. Yes, you read that right. No registration fee required to enter this program. Even better, you will receive pocket money just for participating. Cool, right?</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="who">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-md-4">
+                <img src="{% static 'img/mission.png' %}">
+            </div>
+
+            <div class="col-md-8">
+                <h4 style="font-weight: 700">Who are we ?</h4>
+                <p>Alpha Tech Academy is a tech talent incubation that gives anyone any chance (even non IT background) to learn within 3 months of being a professional Tech Talent. What is our mission? We want to improve capability Tech Talent in Indonesia.</p>
+                <h4 style="font-weight: 700">What is our mission</h4>
+                <p>We want to improve capability Tech Talent in Indonesia.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="materi" style="margin-bottom: 30px; margin-top: 40px;">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <h2>What Will You Learn</h2>
+            </div>            
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 m-2 border text-center willlearn">
+                 <img class="logo_home2" src="https://i.postimg.cc/ZqFbvjhV/learn-html.png" /> 
+            </div>
+            <div class="col-2 m-2 border text-center willlearn">
+                <img class="logo_home2" src="https://i.postimg.cc/c424prmM/learn-programming.png" />
+            </div>
+            <div class="col-2 m-2 border text-center willlearn">
+                <img class="logo_home2" src="https://i.postimg.cc/vBYQr9YM/learn-git.png" />
+            </div>
+            <div class="col-2 m-2 border text-center willlearn">
+                <img style="padding-top: 65px;" src="https://i.postimg.cc/m2zTyTsc/learn-api.png" />
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-2 m-2 border text-center willlearn">
+                <img style="padding-top: 50px;" src="https://i.postimg.cc/6qTtSX4m/learn-react.png" />
+            </div>
+            <div class="col-2 m-2 border text-center willlearn">
+                <img style="padding-top: 50px;" src="https://i.postimg.cc/GmDhddg0/learn-tdd.png" />
+            </div>
+            <div class="col-2 m-2 border text-center willlearn">
+                <img class="logo_home2" src="https://i.postimg.cc/c4p0DPxF/learn-server.png" />
+            </div>
+            <div class="col-2 m-2 border text-center willlearn">
+                <img class="logo_home2" src="https://i.postimg.cc/vTjbwNWH/learn-scrum.png" />
+            </div>
+    </div>
+
+</div>
+{% endblock %}

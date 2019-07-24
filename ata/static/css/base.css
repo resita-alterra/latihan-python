@@ -1,0 +1,66 @@
+a {
+    color: black;
+}
+header{
+    background: #2ec6ce;
+    /* position: fixed; */
+    width : 100%;
+}
+.menu {
+    background-color: white;
+}
+.judul{
+    float:left;
+    background-attachment: fixed;
+    /* background-color: white; */
+    padding : 10px;
+    font-size: 20px;
+}
+
+header li{
+    display: inline;
+    float: right;
+    padding-bottom : 12px;
+    padding-left: 10px;
+
+}
+.isi-header {
+    background-color: #2ec6ce;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color : white;
+}
+
+.product {
+    background-color:#2ec6ce;
+    padding: 10px;
+}
+
+.product img {
+    padding: 4px;
+}
+.cp {
+    background-color: black;
+    padding-top: 10px;
+    color: white;
+}
+
+.logo {
+    width: 100%;
+}
+
+/* author */
+.summary td {
+    width: 250px;
+    padding: 5px;
+}
+
+/* blog */
+
+.willlearn {
+    height: 150px;
+}
+
+.logo_home2 {
+    padding-top: 40px;
+}

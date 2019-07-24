@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title%}
+<title>Input Mentor</title>
+{% endblock %}
+
+{% block blog %}{% endblock %}
+
+{% block content %}
+<div class="container">
+    
+    <form action="" method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+
+    
+</div>
+{% endblock %}
